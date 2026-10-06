@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb",
+        "includeFiles": [
+          "templates/**",
+          "static/**",
+          "utils/**",
+          "models/**",
+          "routes/**",
+          "forms/**",
+          "config.py",
+          "app.py",
+          "wsgi.py",
+          "requirements.txt",
+          "seed_data.py"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "wsgi.py"
+    }
+  ]
+}
