@@ -21,7 +21,7 @@ def _fallback_settings():
         address='Urlabari-9, Morang, Nepal',
         facebook_url='', instagram_url='', youtube_url='',
         announcement='', footer_text='© 2026 Baljyoti English Boarding School. All Rights Reserved.',
-        years='25+', students='605+', teachers='40+', board_result='90%+',
+        years='10+', students='150+', teachers='12+', board_result='90%+',
         office_hours='Sun - Fri: 9:00 AM - 4:00 PM',
         hero_title='Inspiring Minds. Building Futures.',
         hero_description='', hero_image=None, about_image=None,
@@ -81,14 +81,14 @@ def _bootstrap_defaults(app):
 
         try:
             from models.admin import AdminUser
-            email = 'admin@nebula'
+            email = 'admin@baljyoti'
             existing = AdminUser.query.filter_by(email=email).first()
             if not existing:
                 admin = AdminUser(name='Admin', email=email, role='admin', is_active=True)
                 admin.set_password('admin123')
                 db.session.add(admin)
                 db.session.commit()
-                print('Created default admin admin@nebula / admin123')
+                print('Created default admin admin@baljyoti / admin123')
             elif os.environ.get('RESET_ADMIN_PASSWORD') == '1':
                 existing.set_password('admin123')
                 existing.is_active = True

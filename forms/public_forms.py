@@ -22,11 +22,6 @@ class AdmissionForm(FlaskForm):
         ('Grade 3', 'Grade 3'),
         ('Grade 4', 'Grade 4'),
         ('Grade 5', 'Grade 5'),
-        ('Grade 6', 'Grade 6'),
-        ('Grade 7', 'Grade 7'),
-        ('Grade 8', 'Grade 8'),
-        ('Grade 9', 'Grade 9'),
-        ('Grade 10', 'Grade 10'),
     ], validators=[DataRequired()])
     guardian_name = StringField('Parent/Guardian Name', validators=[DataRequired(), Length(min=2, max=150)])
     phone = TelField('Phone', validators=[DataRequired(), Length(min=7, max=30)])

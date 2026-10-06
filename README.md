@@ -140,6 +140,10 @@ Open: **http://localhost:5000**
 
 Admin panel: **http://localhost:5000/admin/login**
 
+**Default admin credentials (auto-created on first run):**
+- Email: `admin@baljyoti`
+- Password: `admin123`
+
 ---
 
 ## Production Deployment

@@ -11,7 +11,7 @@
     <form method="POST" enctype="multipart/form-data" class="admin-form">
       {{ form.hidden_tag() }}
       <div class="form-group"><label>Name *</label>{{ form.name() }}</div>
-      <div class="form-group"><label>Role</label>{{ form.role(placeholder='e.g. Parent of Grade 8 Student') }}</div>
+      <div class="form-group"><label>Role</label>{{ form.role(placeholder='e.g. Parent of Grade 4 Student') }}</div>
       <div class="form-group"><label>Message *</label>{{ form.message(rows=5) }}</div>
       <div class="form-group"><label>Rating (1-5)</label>{{ form.rating() }}</div>
       <div class="form-group">
